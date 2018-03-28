@@ -1,0 +1,30 @@
+<h1>Crypto Coin Converter</h1>
+
+<form action="/" method="post">
+  <label for="count">Convert
+    <input id="count" type="text" name="count">
+  </label>
+  <select name="from">
+    <%= @cryptocurrencies.each do |crypto| %>
+      <option value="<%= crypto %>"><%= crypto['name'] %></option>
+    <% end %>
+  </select>
+  <span>to</span>
+  <select name="to">
+    <%= @cryptocurrencies.each do |crypto| %>
+      <option value="<%= crypto %>"><%= crypto['name'] %></option>
+    <% end %>
+  </select>
+
+  <input type="submit" value="Go!">
+</form>
+<!-- 
+<div class="results">
+  <p><%= @count %> <%= @from['name'] %> is currently worth
+    <%= @result %> <%= @to['name'] %>
+  </p>
+</div>
+
+<div class="chart"> -->
+
+</div>
